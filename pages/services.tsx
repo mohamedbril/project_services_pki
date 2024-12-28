@@ -7,11 +7,15 @@ import HashCard from "../components/ui/HashCard";
 import HomeHeader from "../components/ui/HomeHeader";
 import SymmetricEncryptionCard from "../components/ui/SymmetricEncryptionCard";
 import Layout from "../app/layout";
+import Navbar from '../components/layout/Navbar';
 
 export default function services() {
-
   return (
     <>
+    <div className="container m-auto p-2 px-4 sm:px-6 md:px-8">
+      <Navbar/>
+    </div>
+    
       <HomeHeader />
       <CardsContainer>
         <SymmetricEncryptionCard 
@@ -113,15 +117,28 @@ export default function services() {
       </CardsContainer>
       <Divider/>
       <CardsContainer>
-      <AsymmetricEncryptionCard 
+        <AsymmetricEncryptionCard 
             destination='/pass'
             shortName='Auto-Password'
             name='auto genrate password'
             keyBits='all'
             securityLevel='Très élevé'
           />
+        <AsymmetricEncryptionCard 
+            destination='/generate-certificate'
+            shortName='Generate Certificate'
+            name='Generate a certificate with a custom private key'
+            keyBits='2048 bits'
+            securityLevel='Très élevé'
+          />
+        <AsymmetricEncryptionCard 
+            destination='/sign'
+            shortName='Sign Document'
+            name='Sign a document with a private key'
+            keyBits='2048 bits'
+            securityLevel='Très élevé'
+          />
       </CardsContainer>
     </>
   )
-
 }
