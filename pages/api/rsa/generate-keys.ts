@@ -4,7 +4,7 @@ const rsa = require('node-rsa')
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if(req.method == 'GET'){
-        const bits: number = Constants.bitsMap.get(req.query.bits.toString()) ?? 2048
+        const bits: number = req.query.bits ? Constants.bitsMap.get(req.query.bits.toString()) ?? 2048 : 2048
 
         const key = new rsa().generateKeyPair(bits)
         const publicKey = key.exportKey('public')

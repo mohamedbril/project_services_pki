@@ -14,7 +14,7 @@ import * as Constants from '../../utils/constants'
 
 export default function DES() {
   const searchParams = useSearchParams()
-  const isTriple: string = searchParams.get('triple')
+  const isTriple: string = searchParams?.get('triple') ?? ''
 
   const [triple, setTriple] = useState<boolean>(false)
 
@@ -130,7 +130,7 @@ export default function DES() {
                 type="text" 
                 value={key}
                 onChange={handleKeyChange}
-                maxLength={triple ? null : 8} 
+                maxLength={triple ? undefined : 8} 
                 className='bg-slate-900 border rounded-lg p-2 w-[100%] border-slate-500'
               />
             </div>

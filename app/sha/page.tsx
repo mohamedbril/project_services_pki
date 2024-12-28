@@ -14,7 +14,7 @@ import * as Constants from '../../utils/constants'
 
 export default function SHA() {
     const searchParams = useSearchParams()
-    const searchV: string = searchParams.get('v')
+    const searchV: string = searchParams?.get('v') || ''
     const [shaVariant, setShaVariant] = useState<string>('')
 
     useEffect(() => {

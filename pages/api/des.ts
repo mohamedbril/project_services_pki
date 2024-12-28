@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             const keyHex = CryptoJS.enc.Utf8.parse(key)
             const ivHex = iv ? CryptoJS.enc.Hex.parse(CryptoJS.enc.Utf8.parse(iv).toString(CryptoJS.enc.Hex)) 
                             : CryptoJS.enc.Hex.parse('0000')
-            const modeObj = Constants.modesMap.get(mode.toString() ?? 'ECB')
+            const modeObj = Constants.modesMap.get((mode?.toString() ?? 'ECB'))
             
             try{
                 if(!ciphertext){ //we have to encrypt

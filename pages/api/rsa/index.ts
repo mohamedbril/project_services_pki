@@ -8,13 +8,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             let publicKeyObj: rsa
             let privateKeyObj: rsa
 
-            plaintext = plaintext ? plaintext.toString() : null
-            ciphertext = ciphertext ? ciphertext.toString() : null
-            publicKey = publicKey ? publicKey.toString() : null
-            privateKey = privateKey ? privateKey.toString() : null
+            plaintext = plaintext ? plaintext.toString() : undefined
+            ciphertext = ciphertext ? ciphertext.toString() : undefined
+            publicKey = publicKey ? publicKey.toString() : undefined
+            privateKey = privateKey ? privateKey.toString() : undefined
 
-            if(plaintext) plaintext = decodeURI(plaintext).replace(/%2b/g, '+')
-            if(ciphertext) ciphertext = decodeURI(ciphertext).replace(/%2b/g, '+')
+            if(plaintext) plaintext = decodeURI(plaintext as string).replace(/%2b/g, '+')
+            if(ciphertext) ciphertext = decodeURI(ciphertext as string).replace(/%2b/g, '+')
 
             if(!plaintext && !ciphertext){
                 res.status(400).send({

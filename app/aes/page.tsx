@@ -20,7 +20,7 @@ type Event = {
 
 export default function AES() {
     const searchParams = useSearchParams()
-    const searchBits: string = searchParams.get('bits')
+    const searchBits: string = searchParams?.get('bits') ?? '' 
     const [variant, setVariant] = useState<string>('')
     let bits: string = ''
 
