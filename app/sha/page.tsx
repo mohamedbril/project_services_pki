@@ -8,9 +8,9 @@ import ErrorMessage from "../../components/ui/ErrorMessage";
 import Loader from "../../components/ui/Loader";
 import * as Constants from '../../utils/constants'
 
-export const metadata = {
-    title: 'SHA | encryptia'
-}
+// export const metadata = {
+//     title: 'SHA | encryptia'
+// }
 
 export default function SHA() {
     const searchParams = useSearchParams()

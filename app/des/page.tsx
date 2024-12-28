@@ -8,9 +8,9 @@ import ErrorMessage from '../../components/ui/ErrorMessage'
 import Loader from '../../components/ui/Loader'
 import * as Constants from '../../utils/constants'
 
-export const metadata = {
-  title: 'DES | encryptia', //TODO: implement dynamic DES/TDES title
-}
+// export const metadata = {
+//   title: 'DES | encryptia', //TODO: implement dynamic DES/TDES title
+// }
 
 export default function DES() {
   const searchParams = useSearchParams()

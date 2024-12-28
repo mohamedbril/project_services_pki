@@ -7,9 +7,9 @@ import ErrorMessage from '../../components/ui/ErrorMessage'
 import Loader from '../../components/ui/Loader'
 import * as Constants from '../../utils/constants'
 
-export const metadata = {
-    title: 'RSA | encryptia'
-}
+// export const metadata = {
+//     title: 'RSA | encryptia'
+// }
 
 export default function RSA() {
     const [generateKeysBtnContent, setGenerateKeysBtnContent] = useState<string | JSX.Element>('Generate Keys')

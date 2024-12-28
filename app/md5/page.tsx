@@ -6,9 +6,9 @@ import AlgorithmHeader from "../../components/ui/AlgorithmHeader";
 import ErrorMessage from "../../components/ui/ErrorMessage";
 import Loader from "../../components/ui/Loader";
 
-export const metadata = {
-    title: 'MD5 | encryptia'
-}
+// export const metadata = {
+//     title: 'MD5 | encryptia'
+// }
 
 export default function MD5() {
     const [plaintext, setPlaintext] = useState<string>('')

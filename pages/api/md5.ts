@@ -1,3 +1,4 @@
+import '../styles/globals.css'
 import CryptoJS from "crypto-js"
 import { NextApiRequest, NextApiResponse } from "next"
 
