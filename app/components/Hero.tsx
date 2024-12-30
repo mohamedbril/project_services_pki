@@ -2,11 +2,11 @@ import Image from "next/image";
 import BlurArrow from "../../public/assets/blue-button.svg";
 import Gradient from "../../public/assets/Gradient.svg";
 import HeroImage from "../../public/assets/Image.svg";
-import HeroImage1 from "../../public/assets/Hero16.svg";
-import Google from "../../public/assets/Google.svg";
-import Slack from "../../public/assets/Slack.svg";
-import Truspilot from "../../public/assets/Trustpilot.svg";
-import Cnn from "../../public/assets/CNN.svg";
+import HeroImage1 from "../../public/assets/Hero18.svg";
+import Google from "../../public/assets/nextjs-icon.svg";
+import Slack from "../../public/assets/tailwind-css.svg";
+import Truspilot from "../../public/assets/nodejs-logo.svg";
+import Cnn from "../../public/assets/js-logo.svg";
 import Cluth from "../../public/assets/Clutch.svg";
 import Link from "next/link";
 
@@ -39,15 +39,15 @@ const Hero = () => {
       <div className="w-full h-full relative flex justify-center">
         <Image src={Gradient} className="min-h-[500px] sm:min-h-[600px] md:min-h-[700px] w-full object-cover lg:min-h-[800px]" alt="Gradient" />
         <div className="absolute bottom-8 left-4 right-4 lg:container">
-            <Image className="m-auto w-fit h-[310px] sm:h-[410px] md:h-[510px] lg:h-[600px]" src={HeroImage1} alt="heroImage" />
+            <Image className="m-auto w-fit h-[150px] sm:h-[410px] md:h-[510px] lg:h-[500px]" src={HeroImage1} alt="heroImage" />
             <div className="lg:flex lg:justify-between lg:items-center lg:pt-[64px]">
-                <p className="text-white text-[16px] lg:text-[18px] text-center pt-4 lg:pt-0 sm:pt-6 md:pt-8">De confiance par ces entreprises</p>
+                <p className="text-white text-[16px] lg:text-[18px] text-center pt-4 lg:pt-0 sm:pt-6 md:pt-8">Technologie Utilisée</p>
                 <div className="flex flex-wrap gap-x-8 xl:gap-[96px] justify-center items-center">
                     <Image src={Google} alt="google" />
                     <Image src={Slack} alt="Slack" />
                     <Image src={Truspilot} alt="Truspilot" />
                     <Image src={Cnn} alt="Cnn" />
-                    <Image src={Cluth} alt="Cluth" />
+                    {/* <Image src={Cluth} alt="Cluth" /> */}
                 </div>
             </div>
         </div>

@@ -6,12 +6,23 @@ import GitHubIcon from '../icons/GitHubIcon'
 function Navbar() {
   return (
     <div className='relative pt-6 lg:pt-8 flex items-center justify-between font-semibold text-md leading-6 text-slate-200'>
-        <Link href='services/'>
-            <span className='text-xl'>
-                <LogoIcon />
-            </span>
-        </Link>
-
+        
+        <div className='flex item-center'>
+            <div className='flex items-center space-x-4'>
+                <Link href='services/'>
+                    <span className='text-xl'>
+                        <LogoIcon />
+                    </span>
+                </Link>
+                <nav className='hidden md:block'>
+                    <ul className="flex items-center space-x-8">
+                        <li>
+                            <Link href="/" className='hover:text-sky-500 dark:hover:text-sky-400'>Secplus</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div className='flex item-center'>
             <div className='flex items-center'>
                 <nav className='hidden md:block'>

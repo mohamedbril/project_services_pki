@@ -7,20 +7,21 @@ import ErrorMessage from "../../components/ui/ErrorMessage";
 import Loader from "../../components/ui/Loader";
 
 export default function GenerateCertificate() {
-    const [privateKey, setPrivateKey] = useState<string>('-----BEGIN RSA PRIVATE KEY-----\n\n-----END RSA PRIVATE KEY-----')
+    const [publicKey, setPublicKey] = useState<string>('-----BEGIN RSA PUBLIC KEY-----\n\n-----END RSA PUBLIC KEY-----')
     const [commonName, setCommonName] = useState<string>('')
     const [organization, setOrganization] = useState<string>('')
     const [country, setCountry] = useState<string>('')
     const [certificate, setCertificate] = useState<string>('') 
     const [errorMessage, setErrorMessage] = useState<string | JSX.Element>('') 
     const [generateBtnContent, setGenerateBtnContent] = useState<string | JSX.Element>('Generate')
+    const [expirationDate, setExpirationDate] = useState<string>('')
 
     const handleGenerateBtnClick = async (event: { preventDefault: () => void; }) => {
         event.preventDefault()
         setErrorMessage('')
         setGenerateBtnContent(<Loader />)
 
-        if (!privateKey || !commonName || !organization || !country) {
+        if (!publicKey || !commonName || !organization || !country || !expirationDate) {
             setErrorMessage(<ErrorMessage>All certificate details are required</ErrorMessage>)
             setGenerateBtnContent('Generate')
             return
@@ -32,7 +33,7 @@ export default function GenerateCertificate() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ privateKey, commonName, organization, country })
+                body: JSON.stringify({ publicKey, commonName, organization, country, expirationDate })
             })
             const status = res.status
             const contentType = res.headers.get('content-type')
@@ -66,10 +67,11 @@ export default function GenerateCertificate() {
         setGenerateBtnContent('Generate')
     }
 
-    const handlePrivateKeyChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setPrivateKey(event.target.value)
+    const handlePublicKeyChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setPublicKey(event.target.value)
     const handleCommonNameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setCommonName(event.target.value)
     const handleOrganizationChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setOrganization(event.target.value)
     const handleCountryChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setCountry(event.target.value)
+    const handleExpirationDateChange = (event: { target: { value: React.SetStateAction<string>; }; }) => setExpirationDate(event.target.value)
 
     const downloadCertificate = () => {
         const element = document.createElement("a")
@@ -84,17 +86,17 @@ export default function GenerateCertificate() {
         <Layout>
             <AlgorithmHeader name='Generate Certificate'>
                 <p>
-                    This service allows you to generate a certificate using a custom private key. You can download the generated certificate.
+                    This service allows you to generate a certificate using a custom public key. You can download the generated certificate.
                 </p>
             </AlgorithmHeader>
             
             <div className="max-w-3xl m-auto">
-                <label className='block mb-3 text-slate-300'>Private Key</label>
+                <label className='block mb-3 text-slate-300'>Public Key</label>
                 
                 <textarea 
                     className='bg-transparent border border-solid rounded-lg border-slate-500 w-[100%] p-2 h-28 max-h-52 mb-5'
-                    value={privateKey}
-                    onChange={handlePrivateKeyChange}
+                    value={publicKey}
+                    onChange={handlePublicKeyChange}
                 />
 
                 <label className='block mb-3 text-slate-300'>Common Name</label>
@@ -122,6 +124,15 @@ export default function GenerateCertificate() {
                     className='bg-transparent border border-solid rounded-lg border-slate-500 w-[100%] p-2 mb-5'
                     value={country}
                     onChange={handleCountryChange}
+                />
+
+                <label className='block mb-3 text-slate-300'>Expiration Date</label>
+                
+                <input 
+                    type="date"
+                    className='bg-transparent border border-solid rounded-lg border-slate-500 w-[100%] p-2 mb-5'
+                    value={expirationDate}
+                    onChange={handleExpirationDateChange}
                 />
 
                 <button 

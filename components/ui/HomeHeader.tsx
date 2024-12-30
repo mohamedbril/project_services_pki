@@ -16,7 +16,7 @@ function HomeHeader() {
             </p>
           
           <p className='mt-3 text-sm text-center max-w-3xl mx-auto text-slate-500'>
-            Created by <a href='https://github.com/mohamedbril/' className="underline" target="_blank" rel="noopener noreferrer">mohamed bril</a>.
+            Created by <a href='https://github.com/mohamedbril/' className="underline" target="_blank" rel="noopener noreferrer">SecPlus</a>.
           </p>
         </div>
       </header>

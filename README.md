@@ -279,4 +279,4 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT Licence. See `LICENCE.md` for more information.
 
 ## Contributors
-Mohamed bril - [nicolasguarini.it](https://nicolasguarini.it) - [nicolasguarini.py@gmail.com](mailto:nicolasguarini.py@gmail.com)
+SecPlus - [nicolasguarini.it](https://nicolasguarini.it) - [nicolasguarini.py@gmail.com](mailto:nicolasguarini.py@gmail.com)

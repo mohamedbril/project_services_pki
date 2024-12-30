@@ -8,6 +8,7 @@ import HomeHeader from "../components/ui/HomeHeader";
 import SymmetricEncryptionCard from "../components/ui/SymmetricEncryptionCard";
 import Layout from "../app/layout";
 import Navbar from '../components/layout/Navbar';
+import Link from 'next/link';
 
 export default function services() {
   return (
@@ -80,7 +81,15 @@ export default function services() {
       </CardsContainer>
       
       <Divider />
-
+      <div className='container m-auto p-2'>
+      <header className='relative'>
+        <div className='relative mt-1 max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32'>
+            <h1 className='font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center'>
+            Appliquez facilement un hachage à vos textes grâce aux algorithmes les plus connus.
+            </h1>
+        </div>
+      </header>
+    </div>
       <CardsContainer>
             <HashCard 
               destination='/md5'
@@ -115,15 +124,18 @@ export default function services() {
               bruteforceTime='Infini'
             />
       </CardsContainer>
-      <Divider/>
+      <Divider />
+      <div className='container m-auto p-2'>
+      <header className='relative'>
+        <div className='relative mt-1 max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32'>
+            <h1 className='font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center'>
+            Générez facilement des certificats numériques et signez vos documents avec les algorithmes les plus reconnus.
+            </h1>
+        </div>
+      </header>
+    </div>
       <CardsContainer>
-        <AsymmetricEncryptionCard 
-            destination='/pass'
-            shortName='Auto-Password'
-            name='auto genrate password'
-            keyBits='all'
-            securityLevel='Très élevé'
-          />
+
         <AsymmetricEncryptionCard 
             destination='/generate-certificate'
             shortName='Generate Certificate'
@@ -136,6 +148,32 @@ export default function services() {
             shortName='Sign Document'
             name='Sign a document with a private key'
             keyBits='2048 bits'
+            securityLevel='Très élevé'
+          />
+      </CardsContainer>
+      <Divider />
+      <div className='container m-auto p-2'>
+      <header className='relative'>
+        <div className='relative mt-1 max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32'>
+            <h1 className='font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center'>
+            Profitez facilement de nos autres services grâce aux algorithmes les plus fiables et performants.
+            </h1>
+        </div>
+      </header>
+    </div>
+    <CardsContainer>
+        <AsymmetricEncryptionCard 
+            destination='/pass'
+            shortName='Auto-Password'
+            name='auto genrate password'
+            keyBits='all'
+            securityLevel='Très élevé'
+          />
+           <AsymmetricEncryptionCard 
+            destination='/timestamp'
+            shortName='timeStamp'
+            name='Generating a timestamp.'
+            keyBits='all'
             securityLevel='Très élevé'
           />
       </CardsContainer>

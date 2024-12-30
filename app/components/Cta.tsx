@@ -23,7 +23,7 @@ const Cta = () => {
 
           <Link
             className="flex items-center gap-x-3 font-medium text-[#fff] text-[16px] lg:text-[18px]"
-            href="#"
+            href="#pricing"
           >
             Voir les tarifs <Image src={RedArrow} alt="RedArrow" />
           </Link>

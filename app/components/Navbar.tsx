@@ -10,8 +10,8 @@ const navLinks = [
   { name: "Fonctionnalités", link: "#features" },
   { name: "FAQ", link: "#faq" },
   { name: "Tarification", link: "#pricing" },
-  { name: "Entreprise", link: "#enterprise" },
-  { name: "Carrières", link: "#careers" },
+  // { name: "Entreprise", link: "#enterprise" },
+  // { name: "Carrières", link: "#careers" },
 ];
 
 const Navbar = () => {
@@ -19,9 +19,12 @@ const Navbar = () => {
 
   return (
     <nav className="px-5 py-4 lg:px-0 lg:container flex justify-between items-center">
-      <div className="flex items-center gap-20">
+      <div className="flex items-center gap-3">
         <Image src={Logo} alt="Logo" />
-        <ul className="hidden lg:flex gap-x-14">
+        <h1 className="font-extrabold text-base text-primary">
+          SecPlus
+        </h1>
+        <ul className="hidden lg:flex gap-x-14 pl-5">
           {navLinks.map((item, index) => (
             <li key={index}>
               <Link

@@ -13,37 +13,45 @@ const Features = () => {
       <div className="sm:flex items-center mb-14">
         <div className="sm:w-1/2">
           <p className="text-[#0085FF] font-medium text-[16px] mb-2">
-            Surveillance des ventes
+          Sécurité Numérique
           </p>
           <h1 className="text-info font-medium text-[24px] lg:max-w-[572px] lg:text-[42px]  mb-6">
-            Simplifiez la surveillance de vos ventes
+          Sécurité Numérique Simplifiée
           </h1>
           <Image className="m-auto sm:hidden" src={Feature1} alt="Feature1" />
           <p className="text-primary text-[16px] lg:max-w-[500px] lg:text-[18px] mt-6 mb-6">
-            Restez au top des choses et réorganisez votre processus de travail avec notre fonctionnalité révolutionnaire. Obtenez une vue d'ensemble avec notre tableau de bord personnalisable.
+          Restez protégé et optimisez votre cybersécurité avec nos services innovants. Obtenez une protection complète et adaptée à vos besoins grâce à notre plateforme personnalisable.
           </p>
           <ul className="space-y-3">
             <li className="flex items-center gap-4 text-[16px] lg:text-[18px] text-primary">
-              <Image src={Check} alt="check" /> Surveillance des ventes en temps réel
+              <Image src={Check} alt="check" /> Chiffrement et protection des données
             </li>
             <li className="flex items-center gap-4 text-[16px] lg:text-[18px] text-primary">
-              <Image src={Check} alt="check" /> Rapports détaillés et analytiques
+              <Image src={Check} alt="check" /> Génération de certificats numériques sécurisés
             </li>
             <li className="flex items-start gap-4 text-[16px] lg:text-[18px] text-primary">
-              <Image src={Check} alt="check" /> Intégration facile avec d'autres outils
+              <Image src={Check} alt="check" /> Hashing pour garantir l'intégrité des données
+            </li>
+            <li className="flex items-start gap-4 text-[16px] lg:text-[18px] text-primary">
+              <Image src={Check} alt="check" /> Signatures électroniques pour valider vos transactions
+            </li>
+            <li className="flex items-start gap-4 text-[16px] lg:text-[18px] text-primary">
+              <Image src={Check} alt="check" /> Intégration fluide avec vos outils existants
             </li>
           </ul>
           <Link
             className="mt-6 flex items-center gap-3 font-medium text-[#0085FF] text-[16px]"
             href="#"
           >
-            En savoir plus <Image src={bluebutton} alt="bluebutton" />
+            [En savoir plus →] <Image src={bluebutton} alt="bluebutton" />
           </Link>
         </div>
         <div className="sm:w-1/2 hidden sm:block">
           <Image className="w-full" src={Feature1} alt="Feature1" />
         </div>
       </div>
+
+
       <div className="sm:flex sm:flex-row-reverse sm:gap-6 items-center sm:mt-20 mb-14">
         <div className="sm:w-1/2 sm:px-14">
           <p className="text-[#00A424] font-medium text-[16px] mb-2">
@@ -78,7 +86,9 @@ const Features = () => {
           <Image className="w-full" src={Feature2} alt="Feature2" />
         </div>
       </div>
-      <div className="sm:flex items-center sm:mt-20 sm:mb-20 mb-14">
+
+
+      {/* <div className="sm:flex items-center sm:mt-20 sm:mb-20 mb-14">
         <div className="sm:w-1/2 sm:pr-20">
           <p className="text-[#EB2891] font-medium text-[16px] mb-2">
             Surveillance de la croissance
@@ -110,7 +120,7 @@ const Features = () => {
         <div className="sm:w-1/2 hidden sm:block">
           <Image className="w-full" src={Feature3} alt="Feature3" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

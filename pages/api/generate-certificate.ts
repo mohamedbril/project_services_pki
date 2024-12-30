@@ -14,15 +14,15 @@ export const config = {
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
-        const { privateKey, commonName, organization, country } = req.body
+        const { publicKey, commonName, organization, country, expirationDate } = req.body
 
-        if (!privateKey || !commonName || !organization || !country) {
+        if (!publicKey || !commonName || !organization || !country || !expirationDate) {
             console.error('Missing certificate details')
             return res.status(400).json({ message: 'All certificate details are required' })
         }
 
         try {
-            const { certificate } = generateCertificate(privateKey, { commonName, organization, country })
+            const { certificate } = generateCertificate(publicKey, { commonName, organization, country, expirationDate })
             console.log('Certificate generated:', certificate)
             return res.status(200).json({ certificate })
         } catch (error) {
@@ -35,8 +35,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 }
 
-const generateCertificate = (privateKey: string, details: { commonName: string, organization: string, country: string }) => {
-    const { publicKey, privateKey: privateKeyObj } = crypto.generateKeyPairSync('rsa', {
+const generateCertificate = (publicKey: string, details: { commonName: string, organization: string, country: string, expirationDate: string }) => {
+    const { publicKey: generatedPublicKey, privateKey: privateKeyObj } = crypto.generateKeyPairSync('rsa', {
         modulusLength: 2048,
         privateKeyEncoding: {
             type: 'pkcs1',
