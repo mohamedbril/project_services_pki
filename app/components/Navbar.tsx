@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Fonctionnalités", link: "#features" },
   { name: "FAQ", link: "#faq" },
   { name: "Tarification", link: "#pricing" },
-  // { name: "Entreprise", link: "#enterprise" },
+  { name: "À Propos de Nous", link: "#aboutus" },
   // { name: "Carrières", link: "#careers" },
 ];
 

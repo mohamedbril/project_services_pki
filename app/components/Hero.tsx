@@ -14,8 +14,8 @@ const Hero = () => {
   return (
     <>
       <div className="px-5 pt-4 pb-8 lg:container lg:max-w-[846px] lg:m-auto">
-        <h1 className="text-info font-medium text-[32px] text-center lg:text-6xl lg:pt-11 lg:pb-6">
-          Sécurisez vos données avec un chiffrement avancé
+        <h1 className="text-info text-[32px] text-center lg:text-7xl lg:pt-11 lg:pb-6">
+        Votre Partenaire en Cybersécurité : Protection , Confiance
         </h1>
         <p className="text-primary text-center text-[16px] lg:text-[18px] mt-6">
           Protégez vos informations sensibles avec nos services de chiffrement et de déchiffrement de pointe. Assurez-vous que vos données restent confidentielles et sécurisées !

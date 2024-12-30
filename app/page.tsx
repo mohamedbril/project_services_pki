@@ -14,6 +14,7 @@ import Faq from './components/Faq';
 import Pricing from './components/Pricing';
 import Cta from './components/Cta';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 
 
 
@@ -129,6 +130,7 @@ export default function Page() {
       <Features />
       <Faq />
       <Pricing />
+      <AboutUs/>
       <Cta />
       <Footer />
     </>
