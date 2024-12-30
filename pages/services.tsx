@@ -78,6 +78,26 @@ export default function services() {
             keyBits='≥512 bit'
             securityLevel='Très élevé'
           />
+          <SymmetricEncryptionCard 
+            destination={{
+              pathname: '/encfile',
+              query: {bits: '128'}
+            }}
+            shortName='File Encryption'
+            name='AES-256-enc'
+            keyBits='128 bits'
+            securityLevel='Élevé'
+          />
+          <SymmetricEncryptionCard 
+            destination={{
+              pathname: '/decfile',
+              query: {bits: '128'}
+            }}
+            shortName='File Decryption'
+            name='AES-256-dec'
+            keyBits='128 bits'
+            securityLevel='Élevé'
+          />
       </CardsContainer>
       
       <Divider />

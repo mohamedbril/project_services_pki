@@ -17,7 +17,7 @@ function Navbar() {
                 <nav className='hidden md:block'>
                     <ul className="flex items-center space-x-8">
                         <li>
-                            <Link href="/" className='hover:text-sky-500 dark:hover:text-sky-400'>Secplus</Link>
+                            <Link href="/services" className='hover:text-sky-500 dark:hover:text-sky-400'>SecPlus</Link>
                         </li>
                     </ul>
                 </nav>

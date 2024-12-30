@@ -14,7 +14,7 @@ const Cta = () => {
           Protégez votre site web avec notre service de cybersécurité
         </h1>
         <p className="text-center text-[16px] lg:text-[18px] text-white my-10 lg:my-11">
-          Rejoignez plus de 800 propriétaires de sites heureux en boostant la productivité et l'efficacité !
+          {/* Rejoignez plus de 800 propriétaires de sites heureux en boostant la productivité et l'efficacité ! */}
         </p>
         <div className="flex justify-center items-center gap-x-6 lg:gap-x-10">
           <button className="bg-[#fff] py-3 px-6 text-[16px] lg:text-[18px] font-medium text-[#EB2891] rounded">
