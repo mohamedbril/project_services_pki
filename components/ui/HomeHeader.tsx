@@ -12,11 +12,11 @@ function HomeHeader() {
 
             <p className='mt-6 text-lg text-center max-w-3xl mx-auto text-slate-400'>
             Découvrez notre service de cybersécurité pour le chiffrement et le déchiffrement de vos données sensibles. <br />
-            Pour des instructions détaillées, <Link href="https://github.com/mohamedbril/" className='underline'>lisez la documentation</Link>!
+            Pour des instructions détaillées, <Link href="https://github.com/mohamedbril/project_services_pki" className='underline'>lisez la documentation</Link>!
             </p>
           
           <p className='mt-3 text-sm text-center max-w-3xl mx-auto text-slate-500'>
-            Created by <a href='https://github.com/mohamedbril/' className="underline" target="_blank" rel="noopener noreferrer">SecPlus</a>.
+            Created by <a href='https://github.com/mohamedbril/project_services_pki' className="underline" target="_blank" rel="noopener noreferrer">SecPlus</a>.
           </p>
         </div>
       </header>

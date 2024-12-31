@@ -79,7 +79,7 @@ export default function EncFile() {
         <input type="file" onChange={handleFileChange} className="block w-full text-slate-300 mb-5 mx-auto" />
 
         <label className="block mb-3 text-slate-300">Passphrase</label>
-        <input type="text" value={passphrase} onChange={handlePassphraseChange} className="block w-full text-slate-300 mb-5 mx-auto" />
+        <input type="text" value={passphrase} onChange={handlePassphraseChange} className="block w-full text-slate-200 mb-5 mx-auto bg-gray-900" />
 
         <button
           className="block border border-solid border-gray-600 rounded-lg bg-gray-800 hover:text-white hover:bg-gray-700 px-14 py-2 font-medium m-auto mt-5 mb-5"

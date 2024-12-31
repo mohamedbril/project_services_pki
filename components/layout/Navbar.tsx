@@ -31,14 +31,14 @@ function Navbar() {
                             <Link href="/" className='hover:text-sky-500 dark:hover:text-sky-400'>Home</Link>
                         </li>
                         <li>
-                            <Link href="https://github.com/mohamedbril" className="hover:text-sky-500 dark:hover:text-sky-400">
+                            <Link href="https://github.com/mohamedbril/project_services_pki" className="hover:text-sky-500 dark:hover:text-sky-400">
                                 Docs
                             </Link>
                         </li>
                     </ul>
                 </nav>
                 <div className='flex items-center border-l ml-6 pl-6 border-slate-800'>
-                    <Link href="https://github.com/mohamedbril" className="block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" target='_blank' passHref>
+                    <Link href="https://github.com/mohamedbril/project_services_pki" className="block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" target='_blank' passHref>
                         <GitHubIcon />
                     </Link>
                 </div>
